@@ -1,0 +1,358 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start from the top */
+    align-items: center; /* Center items horizontally */
+    color: white; /* Default text color */
+    background-color: #f0f0f0; /* Background for body */
+    margin: 0; /* Remove default margin */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #171A25;
+    position: fixed; /* Fix navbar to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; /* Higher z-index to overlay other elements */
+}
+
+.logo img {
+    height: 50px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px; /* Space between items */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700; /* Bold text */
+    font-size: 18px;
+    transition: opacity 0.3s;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    opacity: 0.7; /* Adjust opacity on hover */
+}
+
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Styles for Navbar */
+@media (max-width: 911px) {
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Space for navbar height */
+        right: 0;
+        background-color: #171A25;
+        width: 100%;
+        max-height: 0; /* Initially hidden */
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        z-index: 5; /* Ensure it overlays registration */
+    }
+
+    .nav-links.active {
+        max-height: 300px; /* Adjust as needed */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+
+    .logo img {
+        height: 40px; /* Smaller logo for mobile */
+    }
+}
+
+/* Box Styles */
+.box {
+    background-color: #171A25; /* Background color for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px; /* Padding inside the box */
+    max-width: 300px; /* Limit max width of the box */
+    width: 100%;
+    height: 65vh; /* 65% of the viewport height */
+    max-height: 390px;
+    margin-top: 80px; /* Space below the navbar */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center contents */
+    justify-content: center; /* Center contents vertically */
+    margin-top: 140px; /* New value */
+
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    padding: 8px 12px; /* Smaller padding */
+    font-size: 14px; /* Smaller font size */
+    color: white;
+    background-color: #171A25;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 0; /* Remove margin to eliminate spacing */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.date-selector {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 48px; /* Adjust to match the height of the button */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background-color: #171A25;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    padding: 5px; /* Smaller padding */
+    width: 70%; /* More narrow width */
+    max-width: 200px; /* Reduced max width */
+    max-height: 200px; /* Set max height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.date-selector.hidden {
+    display: none;
+}
+
+.date {
+    padding: 8px; /* Smaller padding */
+    margin: 0; /* Removed margin */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.date:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+#number-input-container {
+    margin-top: 80px; /* Space between dropdown and input */
+    text-align: center; /* Center align the label and input */
+    display: block; /* Always displayed */
+}
+
+label {
+    font-weight: 700; /* Make label bold */
+    color: #171A25;
+    margin-bottom: 5px; /* Space between label and input */
+    display: block; /* Ensure the label is on its own line */
+}
+
+input[type="number"] {
+    width: 60%; /* Responsive width */
+    max-width: 150px; /* Limit max width */
+    padding: 5px; /* Padding for input */
+    border: 1px solid #171A25; /* Border style */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.forwardbtn {
+    margin-top: 20px;
+    background-color: #cccccc; /* Disabled button color */
+    cursor: not-allowed;
+}
+
+.forwardbtn:not(:disabled) {
+    background-color: #007bff; /* Enabled button color */
+    cursor: pointer;
+}
+
+.label1 {
+    color: white;
+}
+
+#open-selector {
+    font-size: 18px;
+    border: white solid 2px;
+}
+
+
+
+/* FOOTER */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Optional background for contrast */
+}
+
+footer {
+    margin-top: 70px;
+    background-color: #171A25;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Adjusted padding */
+    text-align: center; /* Center all text */
+    width: 100%; /* Ensure footer is full width */
+    position: relative; /* Ensures it sits below content */
+    left: 0; /* Align to the left edge */
+    right: 0; /* Align to the right edge */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure full width for the container */
+    max-width: 1200px; /* Limit max width of the inner content */
+    flex-wrap: wrap;
+}
+
+
+.caption {
+    margin: 20px;
+    text-align: center; /* Center text within captions */
+    flex: 1; /* Allow flexible growth */
+}
+
+.caption h4 {
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: 700; /* Bold for headings */
+    font-size: 1.2em; /* Larger heading */
+}
+
+.caption p {
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Maintain line spacing */
+    font-size: 16px; /* Set font size to 16px */
+}
+
+.caption p br {
+    content: ""; /* Make <br> act like a block */
+    margin-bottom: 10px; /* Add margin below each line */
+    display: block; /* Ensure <br> behaves as a block element */
+}
+
+.links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links li {
+    margin: 10px 0; /* Keep existing spacing for links */
+}
+
+.links a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.links a:hover {
+    color: #ff4081; /* Change color on hover */
+}
+
+.socials {
+    margin-top: 20px;
+    text-align: center; /* Center the text */
+}
+
+.socials-text {
+    font-size: 1.2em; /* Size for the text */
+    margin-bottom: 10px; /* Space between text and icons */
+}
+
+.socials img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.socials img:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+.copyright {
+    font-size: 12px; /* Smaller font size for desktop */
+    margin-top: 20px; /* Space above the copyright text */
+    text-align: center; /* Center the text */
+    color: white; /* Match the footer text color */
+}
+
+/* Adjust font size for tablets */
+@media (min-width: 600px) and (max-width: 900px) {
+    footer {
+        font-size: 1em; /* Adjust base font size for tablets */
+    }
+
+    .caption h4 {
+        font-size: 1.3em; /* Slightly smaller heading size */
+    }
+
+    .caption p {
+        font-size: 15px; /* Slightly smaller paragraph size */
+    }
+
+    .copyright {
+        font-size: 13px; /* Adjust copyright size */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .caption {
+        margin: 10px; /* Reduce margin on mobile */
+    }
+}

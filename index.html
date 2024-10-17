@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a class="logolink" href="http://www.tenerife.es/" target="_blank">
+                <img src="img/logo.png" alt="Logo" />
+            </a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#link1" target="_blank">SENDEROS</a></li>
+            <li><a href="#link1" target="_blank">CIRCULACION</a></li>
+            <li><a href="#link1" target="_blank">BARRANCO</a></li>
+            <li><a href="#link1" target="_blank">ESCALADA</a></li>
+            <li><a href="#link1" target="_blank">CAMPING</a></li>
+            <li><a href="#link1" target="_blank">GRUPOS</a></li>
+            <li><a href="#link1" target="_blank">RESERVAS</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+    </nav>
+
+    <div class="box">
+        <div class="container">
+            <button id="open-selector">Choose Date</button>
+            <div id="date-selector" class="date-selector hidden"></div>
+            <div id="number-input-container">
+                <label for="number-of-people" class="label1">Numero de personas:</label>
+                <input type="number" id="number-of-people" min="1" max="15" value="1">
+                <button class="forwardbtn" id="forwardbtn" disabled>Siguiente Paso</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="caption">
+                <h4>Contactar</h4>
+                <p>
+                    Dirección: Cabildo de Tenerife,<br>
+                    Plaza de España. 1,<br>
+                    38003 Santa Cruz de Tenerife.<br>
+                    Teléfono: 901 501 901 / 922 239 500
+                </p>
+            </div>
+            <div class="caption">
+                <h4>Servicios de la sede</h4>
+                <ul class="links">
+                    <li><a href="#">Anuncios</a></li>
+                    <li><a href="#">Verificación de documentos</a></li>
+                    <li><a href="#">Asesoría electrónica</a></li>
+                    <li><a href="#">Verificación de certificados</a></li>
+                    <li><a href="#">Fecha y hora</a></li>
+                </ul>
+            </div>
+            <div class="caption">
+                <h4>Enlaces de interés</h4>
+                <ul class="links">
+                    <li><a href="#">Portal</a></li>
+                    <li><a href="#">B.O.P.</a></li>
+                    <li><a href="#">Empleo</a></li>
+                    <li><a href="#">Contratante</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="socials">
+            <div class="socials-text">Redes Sociales</div>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="img/facebook-app-round-white-icon.webp" alt="Facebook">
+            </a>
+            <a href="https://www.x.com" target="_blank">
+                <img src="img/X_logo_2023_(white).png" alt="Twitter">
+            </a>
+        </div>
+        <div class="copyright">
+            Copyright ©2014 Cabildo de Tenerife
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
